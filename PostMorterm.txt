@@ -1,0 +1,10 @@
+Le mouvement de l'oisseau a évolué, j'ai préféré faire un mouvement avec la velocité du rigidbody plutôt qu'avec un vector3, j'ai également rajouté sa rotation, selon si il monte ou tombe.
+Le fonctionnement du spawn des pipes et la pool n'a pas vraiment changé hormis le mouvement des pipes qui est aussi passé d'un vector3 à un déplacement avec le rigidbody.
+
+Le score ne marche pas comme j'y avait penser, "ScoreUI" n'existe plus, l'ajout du score et l'update du texte se font directement dans "AddScore" qui est devenu "UpdateScore". L'event ne se déclenchait pas.
+
+La mort du joueur n'a pas changer, même si j'ai pensé à rajouter un event mais je suis rester sur mon idée de base.
+
+Et j'ai rajouté une coroutine dans le GameManager pour attendre un peu après la mort avant de reload la scène.
+
+

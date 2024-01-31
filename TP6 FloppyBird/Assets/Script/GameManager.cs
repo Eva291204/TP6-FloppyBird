@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,5 +32,12 @@ public class GameManager : MonoBehaviour
     {
         GameIsStart = false;
         _gameOverText.gameObject.SetActive(true);
+        StartCoroutine(waitToReloadScene());
+    }
+
+    IEnumerator waitToReloadScene()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("FloppyBird");
     }
 }
